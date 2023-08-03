@@ -78,15 +78,6 @@ async def zed_handler(event):
         buttons = [[Button.inline("❶", data="ahmed1"), Button.inline("❷", data="ahmed2"), Button.inline("❸", data="ahmed3"), Button.inline("❹", data="ahmed4"),],[Button.inline("❺", data="ahmed5"), Button.inline("❻", data="ahmed6"), Button.inline("❼", data="ahmed7"), Button.inline("⇒", data="back1"),]]
         result = builder.article(title="zedub",text=Malath,buttons=buttons,link_preview=False)
         await event.answer([result] if result else None)
-@zedub.zed_cmd(pattern="الاوامر(?: |$)(.*)")
-async def repozedub(event):
-    if event.fwd_from:
-        return
-    if event.reply_to_msg_id:
-        await event.get_reply_message()
-    response = await event.client.inline_query(Config.TG_BOT_USERNAME, "الاوامر")
-    await response[0].click(event.chat_id)
-    await event.delete()
 
 
 @zedub.zed_cmd(pattern=f"الاوامر(?: |$)(.*)") 
