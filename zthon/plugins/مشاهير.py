@@ -29,7 +29,7 @@ from . import mention
 plugin_category = "العروض"
 LOGS = logging.getLogger(__name__)
 
-FANAN = "<b> 𓆩 𝗦𝗢𝗨𝗥𝗖𝗘 𝗧𝗘𝗣𝗧𝗛𝗢𝗡 - 💞🤵💞 𓆪 </b>"
+FANAN = "<b> 𓆩 𝐒𝐎𝐔𝐑𝐂𝐄 𝐍𝐄𝐎𝐍 - 💞🤵💞 𓆪 </b>"
 VANAN = "<b>✾╎افيشش 🥺💘 </b>"
 sts_fanan = "https://telegra.ph/file/50caf0efa9a2453985364.jpg"
 sts_fanan2 = "https://telegra.ph/file/dda7dd09f7d697fe92ff6.jpg" 
