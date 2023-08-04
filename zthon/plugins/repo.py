@@ -59,7 +59,7 @@ async def zelzal2(event):
         await event.client.send_file(
             event.chat_id,
             repo,
-            caption=f"<b>⎉╎الريبـو :- <code>{zelzal}</code></b>\n<b>⎉╎تم التحميـل بواسطـة تيبــثون :- @R_R_B0</b>",
+            caption=f"<b>⎉╎الريبـو :- <code>{zelzal}</code></b>\n<b>⎉╎تم التحميـل بواسطـة ++ :- @R_R_B0</b>",
             parse_mode="html",
             reply_to=reply_id_,
         )
