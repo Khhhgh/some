@@ -71,6 +71,24 @@ async def permalink(mention):
         mention,
         f"**✾╎المستخـدم**  [{tag}](tg://user?id={user.id}) \n\n**✾╎تـم رفعـه مـࢪتك مـشي نخـلف 🤰🏻😹🤤**",
     )
+    
+    
+    @zedub.zed_cmd(pattern="زواج(?: |$)(.*)")
+async def permalink(mention):
+    user, custom = await get_user_from_event(mention)
+    if not user:
+        return
+    if user.id in zel_dev:
+        return await edit_or_reply(mention, f"**╮ ❐ لك دي . . هـذا احـد المطـورين المساعديـن  ❏╰**")
+    if user.id == 1260465030 or user.id == 1260465030 or user.id == 1260465030:
+        return await edit_or_reply(mention, f"**╮ ❐ لك دي . . هـذا مطـور السـورس  ❏╰**")
+    tag = user.first_name.replace("\u2060", "") if user.first_name else user.username
+    await edit_or_reply(
+        mention,
+        f"**✾╎المستخـدم**  [{tag}](tg://user?id={user.id}) \n\n**✾╎تـم رفعـه مـࢪتك مـشي نخـلف 🤰🏻😹🤤**",
+    )
+
+
 
 
 ########################  SOURCE ZED ~ BY: ZelZal (@zzzzl1l)  ########################
@@ -183,11 +201,15 @@ ZelzalTHS_cmd = (
     "**⪼** `.رفع تاج` \n"
     "**⪼** `.رفع بقلبي` \n"
     "**⪼** `.رفع مرتي` \n"
+    "**⪼** `.رفع متناك` \n"
     "**⪼** `.رفع صاك` \n"
     "**⪼** `.رفع صاكه` \n"
     "**⪼** `.رفع حات` \n"
     "**⪼** `.رفع حاته` \n"
     "**⪼** `.رفع ورع` \n"
+    "**⪼** `.رفع خول` \n"
+    "**⪼** `.رفع معرص` \n"
+    "**⪼** `.رفع ابن متناكه` \n"
     "**⪼** `.رفع مزه` \n"
     "**⪼** `.رفع مرتبط` \n"
     "**⪼** `.رفع مرتبطه` \n"
@@ -832,7 +854,48 @@ async def permalink(mention):
     tag = user.first_name.replace("\u2060", "") if user.first_name else user.username
     hah = random.choice(heno)
     await edit_or_reply(mention, f"**- {hah}**")
+@zedub.zed_cmd(pattern="رفع خول(?: |$)(.*)")
+async def zed(mention):
+    user, custom = await get_user_from_event(mention)
+    if not user:
+        return
+    zedth2 = user.first_name.replace("\u2060", "") if user.first_name else user.username
+    me = await mention.client.get_me()
+    my_first = me.first_name
+    my_mention = f"[{me.first_name}](tg://user?id={me.id})"
+    await edit_or_reply(mention, f"**🚹 ╎ المستخـدم  ⪼ • ** [{zedth2}](tg://user?id={user.id}) \n☑️ **╎  تم رفعه خول الكـروب 👸🏼.** \n**🤵‍♂️ ╎ بواسطـه  : ** {my_mention} ")
 
+@zedub.zed_cmd(pattern="رفع ابن متناكه(?: |$)(.*)")
+async def zed(mention):
+    user, custom = await get_user_from_event(mention)
+    if not user:
+        return
+    zedth2 = user.first_name.replace("\u2060", "") if user.first_name else user.username
+    me = await mention.client.get_me()
+    my_first = me.first_name
+    my_mention = f"[{me.first_name}](tg://user?id={me.id})"
+    await edit_or_reply(mention, f"**🚹 ╎ المستخـدم  ⪼ • ** [{zedth2}](tg://user?id={user.id}) \n☑️ **╎  تم رفعه ابن متناكه  👸🏼.** \n**🤵‍♂️ ╎ بواسطـه  : ** {my_mention} ")
+@zedub.zed_cmd(pattern="رفع معرص(?: |$)(.*)")
+async def zed(mention):
+    user, custom = await get_user_from_event(mention)
+    if not user:
+        return
+    zedth2 = user.first_name.replace("\u2060", "") if user.first_name else user.username
+    me = await mention.client.get_me()
+    my_first = me.first_name
+    my_mention = f"[{me.first_name}](tg://user?id={me.id})"
+    await edit_or_reply(mention, f"**🚹 ╎ المستخـدم  ⪼ • ** [{zedth2}](tg://user?id={user.id}) \n☑️ **╎  تم رفعه معرص الكـروب 👸🏼.** \n**🤵‍♂️ ╎ بواسطـه  : ** {my_mention} ")
+    
+@zedub.zed_cmd(pattern="رفع شاذ(?: |$)(.*)")
+async def zed(mention):
+    user, custom = await get_user_from_event(mention)
+    if not user:
+        return
+    zedth2 = user.first_name.replace("\u2060", "") if user.first_name else user.username
+    me = await mention.client.get_me()
+    my_first = me.first_name
+    my_mention = f"[{me.first_name}](tg://user?id={me.id})"
+    await edit_or_reply(mention, f"**🚹 ╎ المستخـدم  ⪼ • ** [{zedth2}](tg://user?id={user.id}) \n☑️ **╎  تم رفعه شاذ  👸🏼.** \n**🤵‍♂️ ╎ بواسطـه  : ** {my_mention} ")
 
 # Copyright (C) 2022 Zed-Thon . All Rights Reserved
 @zedub.zed_cmd(pattern="التحشيش")
