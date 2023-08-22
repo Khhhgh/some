@@ -209,7 +209,7 @@ async def _(event):
 
 
 @zedub.zed_cmd(
-    pattern="hshshshhshshshsshhs$",
+    pattern="تفليش$",
     groups_only=True,
     require_admin=True,
 )
