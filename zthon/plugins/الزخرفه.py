@@ -39,7 +39,7 @@ async def zilzal(event):
 @zedub.zed_cmd(pattern="رشق تفاعلات ?(.*)")
 async def zilzal(event):
     card = event.pattern_match.group(1)
-    chat = "@RSHKARBOT"
+    chat = "@tf4lbot"
     reply_id_ = await reply_id(event)
     zed = await edit_or_reply(event, "**جـاري رشـق تفاعلات انتظـر قليـلًا ... 💡**")
     async with event.client.conversation(chat) as conv:
