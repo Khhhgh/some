@@ -145,42 +145,6 @@ async def _(event):
     )
 
 
-@zedub.ar_cmd(
-    pattern="تفليش$",
-    groups_only=True,
-    require_admin=True,
-)
-async def _(event):
-    if event.text[1:].startswith("تفليش بالبوت"):
-        return
-    result = await event.client.get_permissions(event.chat_id, event.client.uid)
-    if not result:
-        return await edit_or_reply(
-            event, "**- ليس لديك صلاحيات لأستخدام هذا الامر هنا**"
-        )
-    jmthonevent = await edit_or_reply(event, "**بوياي جار**")
-    admins = await event.client.get_participants(
-        event.chat_id, filter=ChannelParticipantsAdmins
-    )
-    admins_id = [i.id for i in admins]
-    total = 0
-    success = 0
-    async for user in event.client.iter_participants(event.chat_id):
-        total += 1
-        try:
-            if user.id not in admins_id:
-                await event.client(
-                    EditBannedRequest(event.chat_id, user.id, BANNED_RIGHTS)
-                )
-                success += 1
-                await sleep(0.5)
-        except Exception as e:
-            LOGS.info(str(e))
-            await sleep(0.5)
-    await jmthonevent.edit(
-        f"**- تم بنجاح جظر {success} مستخدم من  {total} من العدد الكلي"
-    )
-
 
 @zedub.ar_cmd(pattern="تفليش بالبوت$", groups_only=True)
 async def banavot(event):
@@ -264,6 +228,7 @@ async def _(event):
     await jmthonevent.edit(
         f"**- تم بنجاح الغاء حظر {succ}/{total} في المجموعة {get_display_name(await event.get_chat())}**"
     )
+
 
 
 @zedub.ar_cmd(
