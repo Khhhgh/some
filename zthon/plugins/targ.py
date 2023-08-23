@@ -2,7 +2,7 @@ from asyncio import sleep
 
 from googletrans import LANGUAGES, Translator
 
-from zedthon import zedub
+from zthon import zedub
 
 from ..core.managers import edit_delete, edit_or_reply
 from . import deEmojify
