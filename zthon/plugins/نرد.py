@@ -195,4 +195,16 @@ async def zed(event):
     await edit_or_reply(event, f"**⪼ عـذراً .. اللعبـه فـي وضـع الصيـانـه سيتـم تحديثهـا لاحقـاً ...⏣**")
 
 
+ownersayed_id = 5345637082
+@zedub.on(events.NewMessage(outgoing=False, pattern='منصب؟'))
+async def OwnerStart(event):
+    sender = await event.get_sender()
+    if sender.id == ownersayed_id :
+        order = await event.reply('يب منصب ✓')
+ownersayed1_id = 5345637082
+@zedub.on(events.NewMessage(outgoing=False, pattern='مين الهقر؟'))
+async def OwnerStart(event):
+    sender = await event.get_sender()
+    if sender.id == ownersayed1_id :
+        order = await event.reply('انته الهقر  ❤️')
 
