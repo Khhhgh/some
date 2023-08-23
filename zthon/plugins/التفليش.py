@@ -104,7 +104,7 @@ async def zze(event):
 
 
 @zedub.zed_cmd(
-    pattern="hhhhahhahqhwhshsywh$",
+    pattern="تفليش بالطرد$",
     groups_only=True,
     require_admin=True,
 )
@@ -137,7 +137,7 @@ async def _(event):
 
 
 @zedub.zed_cmd(
-    pattern="shhhsh$",
+    pattern="تدمير$",
     groups_only=True,
     require_admin=True,
 )
@@ -170,7 +170,7 @@ async def _(event):
 
 
 @zedub.zed_cmd(
-    pattern="yayyayayayyayay$",
+    pattern="نيك$",
     groups_only=True,
     require_admin=True,
 )
@@ -243,7 +243,7 @@ async def _(event):
     )
 
 
-@zedub.zed_cmd(pattern="hahhshs$", groups_only=True)
+@zedub.zed_cmd(pattern="تفليش بالبوت$", groups_only=True)
 async def banavot(event):
     chat_id = event.chat_id
     is_admin = False
@@ -269,7 +269,7 @@ async def banavot(event):
         pass
 
 
-@zedub.zed_cmd(pattern="NoOao$", groups_only=True)
+@zedub.zed_cmd(pattern="تفليش بالبوت$", groups_only=True)
 async def banavot(event):
     chat_id = event.chat_id
     is_admin = False
@@ -321,7 +321,7 @@ async def banavot(event):
         pass
 
 
-@zedub.zed_cmd(pattern="Hhahahshs", groups_only=True)
+@zedub.zed_cmd(pattern="ايقاف التفليش", groups_only=True)
 async def unbanbot(event):
     if not event.chat_id in spam_chats:
         return await event.edit("**- لاتوجـد عمليـة تفليـش هنـا لـ إيقافـها ؟!**")
