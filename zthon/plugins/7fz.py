@@ -33,20 +33,16 @@ async def saf(e):
     await edit_delete(e, "- تم بنجاح حفظ الرسالة في الرسائل المحفوظة", time=8)
 
 
-@zedub.ar_cmd(
-    admin_cmd(pattern="همسة ?(.*)")
-)
-async def wspr(event):
-    if event.fwd_from:
-        return
-    jepiqb = event.pattern_match.group(1)
-    rrrd7 = "@nnbbot"
+@zedub.ar_cmd(pattern="همسة ?(.*)")
+async def roz(event):
+    razan = event.pattern_match.group(1)
+    BE = "@nnbbot"
     if event.reply_to_msg_id:
-        reply_to_id = await event.get_reply_message()
-    tap = await bot.inline_query(rrrd7, jepiqb) 
-    await tap[0].click(event.chat_id)
+        await event.get_reply_message()
+    R7 = await zthon.inline_query(BE, razan)
+    await R7[0].click(event.chat_id)
     await event.delete()
-    
+
         
 @zedub.ar_cmd(admin_cmd("الهمسة"))
 async def _(event):
