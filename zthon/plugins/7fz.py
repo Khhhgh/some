@@ -33,15 +33,25 @@ async def saf(e):
     await edit_delete(e, "- تم بنجاح حفظ الرسالة في الرسائل المحفوظة", time=8)
 
 
-@zedub.ar_cmd(pattern="همسة ?(.*)")
-async def roz(event):
-    razan = event.pattern_match.group(1)
-    BE = "@whisperBot"
+@zedub.ar_cmd(
+    admin_cmd(pattern="همسة ?(.*)")
+)
+async def wspr(event):
+    if event.fwd_from:
+        return
+    jepiqb = event.pattern_match.group(1)
+    rrrd7 = "@nnbbot"
     if event.reply_to_msg_id:
-        await event.get_reply_message()
-    R7 = await zthon.inline_query(BE, razan)
-    await R7[0].click(event.chat_id)
+        reply_to_id = await event.get_reply_message()
+    tap = await bot.inline_query(rrrd7, jepiqb) 
+    await tap[0].click(event.chat_id)
     await event.delete()
+    
+        
+@zedub.ar_cmd(admin_cmd("الهمسة"))
+async def _(event):
+     if not event.text[0].isalpha() and event.text[0] not in ("/", "#", "@", "!"):
+        await event.edit("**⌯︙شـرح كيـفية كـتابة همـسة سـرية**\n⌯︙اولا اكتب الامر  .همسة  بعدها الرسالة بعدها اكتب معرف الشخص\n⌯︙مـثال  :   `.همسة ههلا @R_R_B0`")
 
 
 @zedub.ar_cmd(pattern="ايجاد الفايروسات$")
